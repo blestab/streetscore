@@ -1,0 +1,19 @@
+@baseUrl = http://localhost:3000
+
+# Request 0
+GET https://api.github.com/users/defunkt HTTP/1.1
+User-Agent: Awesome-Octocat-App
+
+###
+
+# Request 1
+POST {{baseUrl}}/api/auth/signup  HTTP/1.1
+Content-Type: application/json
+
+{
+    "username":"test",
+    "email":"email@bugmenot.com",
+    "password":"password"
+}
+
+###
