@@ -31,7 +31,7 @@ export const signin = async (req, res, next) => {
     });
     const { password: pass, ...restOfUser } = validUser._doc;
     res
-      .cookie("token", token, {
+      .cookie("access_token", token, {
         httpOnly: true,
         expires: new Date(Date.now() + 86400000),
       })
@@ -51,7 +51,7 @@ export const google = async (req, res, next) => {
       });
       const { password: pass, ...restOfUser } = user._doc;
       res
-        .cookie("token", token, {
+        .cookie("access_token", token, {
           httpOnly: true,
         })
         .status(200)
@@ -75,7 +75,7 @@ export const google = async (req, res, next) => {
       });
       const { password: pass, ...restOfUser } = newUser._doc;
       res
-        .cookie("token", token, {
+        .cookie("access_token", token, {
           httpOnly: true,
         })
         .status(200)
