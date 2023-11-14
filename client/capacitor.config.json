@@ -1,0 +1,8 @@
+{
+  "appId": "com.streetscore.app",
+  "appName": "StreetScore",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}
